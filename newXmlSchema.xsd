@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    
+    
+    <!--definice typu-->
+    
+    <xs:simpleType name="ok_error">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="ok|error"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="yes_no">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="yes|no"/>
+        </xs:restriction>
+    </xs:simpleType>
+   
+    <xs:complexType name="windscreen_w">
+        <xs:sequence>
+            <xs:element name="left" type="ok_error"/>
+            <xs:element name="right" type="ok_error"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="suspension_height">
+        <xs:simpleContent>
+            <xs:extension base="xs:integer">
+                <xs:attribute name="correct" type="yes_no"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:simpleType name="charge_capacity">
+        <xs:restriction base="xs:integer">
+           <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="6000"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="max_speed">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="450"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="volume">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="speed">
+        <xs:simpleContent>
+            <xs:extension base="max_speed">
+                <xs:attribute name="max" type="max_speed"/>
+                <xs:attribute name="average" type="max_speed"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:simpleType name="gasoline_residue">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="60"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="before_the_inspection">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="50000"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="on_off">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="on|off"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+     <xs:simpleType name="mode">
+        <xs:restriction base="xs:integer">
+            <xs:pattern value="0|1|2|3|4|5"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="person">
+        <xs:sequence>
+            <xs:element name="id" type="xs:positiveInteger"/>
+            <xs:element name="name">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="first_name" type="xs:string"/>
+                        <xs:element name="second_name" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>  
+            <xs:element name="address">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="country" type="xs:string"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="suspension_height" type="suspension_height"/>
+            <xs:element name="driving_style" default="normal">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="slow|normal|aggressive"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="light_color">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="white|yellow|blue"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="charge_capacity" type="charge_capacity"/>
+            <xs:element name="speed" type="speed"/>
+            <xs:element name="gasoline_residue" type="gasoline_residue"/>
+            <xs:element name="before_the_inspection" type="before_the_inspection"/>
+            <xs:element name="system_control">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="battery_quality" type="ok_error"/>
+                        <xs:element name="oil" type="ok_error"/>
+                        <xs:element name="motor" type="ok_error"/>
+                        <xs:element name="wheels">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="front_right" type="ok_error"/>
+                                    <xs:element name="front_left" type="ok_error"/>
+                                    <xs:element name="rear_right" type="ok_error"/>
+                                    <xs:element name="rear_left" type="ok_error"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>  
+                        <xs:element name="body" type="ok_error"/>
+                        <xs:element name="lights">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="front_right">
+                                        <xs:complexType>
+                                            <xs:simpleContent>
+                                                <xs:extension base="ok_error">
+                                                    <xs:attribute name="status" type="on_off"/>
+                                                </xs:extension>
+                                            </xs:simpleContent>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="front_left">
+                                        <xs:complexType>
+                                            <xs:simpleContent>
+                                                <xs:extension base="ok_error">
+                                                    <xs:attribute name="status" type="on_off"/>
+                                                </xs:extension>
+                                            </xs:simpleContent>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>  
+                        <xs:element name="turn_signals">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="front_right">
+                                        <xs:complexType>
+                                            <xs:simpleContent>
+                                                <xs:extension base="ok_error">
+                                                    <xs:attribute name="status" type="on_off"/>
+                                                </xs:extension>
+                                            </xs:simpleContent>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="front_left">
+                                        <xs:complexType>
+                                            <xs:simpleContent>
+                                                <xs:extension base="ok_error">
+                                                    <xs:attribute name="status" type="on_off"/>
+                                                </xs:extension>
+                                            </xs:simpleContent>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="rear_right">
+                                        <xs:complexType>
+                                            <xs:simpleContent>
+                                                <xs:extension base="ok_error">
+                                                    <xs:attribute name="status" type="on_off"/>
+                                                </xs:extension>
+                                            </xs:simpleContent>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="rear_left">
+                                        <xs:complexType>
+                                            <xs:simpleContent>
+                                                <xs:extension base="ok_error">
+                                                    <xs:attribute name="status" type="on_off"/>
+                                                </xs:extension>
+                                            </xs:simpleContent>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="electric_drive" type="ok_error"/>
+                        <xs:element name="cooling_system" type="ok_error"/> 
+                        <xs:element name="internal_systems">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="air_conditioning">
+                                        <xs:complexType>
+                                            <xs:simpleContent>
+                                                <xs:extension base="ok_error">
+                                                    <xs:attribute name="is_cold" type="yes_no"/>
+                                                    <xs:attribute name="mode" type="mode"/>
+                                                </xs:extension>
+                                            </xs:simpleContent>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="autopilot">
+                                        <xs:complexType>
+                                            <xs:simpleContent>
+                                                <xs:extension base="ok_error">
+                                                    <xs:attribute name="is_on" type="yes_no"/>
+                                                </xs:extension>
+                                            </xs:simpleContent>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="audio_system">
+                                        <xs:complexType>
+                                            <xs:simpleContent>
+                                                <xs:extension base="ok_error">
+                                                    <xs:attribute name="volume" type="volume"/>
+                                                </xs:extension>
+                                            </xs:simpleContent>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="on-board_computer" type="ok_error"/>
+                                    <xs:element name="radio">
+                                        <xs:complexType>
+                                            <xs:simpleContent>
+                                                <xs:extension base="ok_error">
+                                                    <xs:attribute name="status" type="on_off"/>
+                                                </xs:extension>
+                                            </xs:simpleContent>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="windscreen_wiper">
+                            <xs:complexType>
+                                <xs:complexContent>
+                                    <xs:extension base="windscreen_w">
+                                        <xs:attribute name="status" type="on_off"/>
+                                    </xs:extension>
+                                </xs:complexContent>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="satellite_signal">
+                            <xs:complexType>
+                                <xs:simpleContent>
+                                    <xs:extension base="ok_error">
+                                        <xs:attribute name="signal_power" type="mode"/>
+                                    </xs:extension>
+                                </xs:simpleContent>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="radars">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="front" type="ok_error"/>
+                                    <xs:element name="left" type="ok_error"/>
+                                    <xs:element name="right" type="ok_error"/>
+                                    <xs:element name="rear" type="ok_error"/>
+                                    <xs:element name="central" type="ok_error"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="sensors">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="s1" type="ok_error"/>
+                                    <xs:element name="s2" type="ok_error"/>
+                                    <xs:element name="s3" type="ok_error"/>
+                                    <xs:element name="s4" type="ok_error"/>
+                                    <xs:element name="s5" type="ok_error"/>
+                                    <xs:element name="s6" type="ok_error"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                         <xs:element name="camera">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="c1" type="ok_error"/>
+                                    <xs:element name="c2" type="ok_error"/>
+                                    <xs:element name="c3" type="ok_error"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>    
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:element name="car_setting">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="owner" type="person"/>
+                <xs:element name="owner" type="person"/>
+                <xs:element name="owner" type="person"/>
+                <xs:element name="owner" type="person"/>
+                <xs:element name="owner" type="person"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+   
+   
+</xs:schema>

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<car_setting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="newXmlSchema.xsd">
+    <owner>
+        <id>1</id>
+        <name>
+            <first_name>Jet</first_name>
+            <second_name>Li</second_name>
+        </name>
+        <address country="China">Beijing</address>
+        <suspension_height correct="no">20</suspension_height>
+        <driving_style>aggressive</driving_style>
+        <light_color>blue</light_color>
+        <charge_capacity>4200</charge_capacity>
+        <speed max="120" average="70">55</speed>
+        <gasoline_residue>20</gasoline_residue>
+        <before_the_inspection>15000</before_the_inspection>
+        <system_control>
+            <battery_quality>ok</battery_quality>
+            <oil>ok</oil>
+            <motor>ok</motor>
+            <wheels>
+                <front_right>ok</front_right>
+                <front_left>ok</front_left>
+                <rear_right>ok</rear_right>
+                <rear_left>ok</rear_left>
+            </wheels>
+            <body>ok</body>
+            <lights>
+                <front_right status="on">ok</front_right>
+                <front_left  status="on">ok</front_left>
+            </lights>
+            <turn_signals>
+                <front_right status="off">ok</front_right>
+                <front_left status="off">ok</front_left>
+                <rear_right status="off">ok</rear_right>
+                <rear_left status="off">ok</rear_left>
+            </turn_signals>
+            <electric_drive>ok</electric_drive>
+            <cooling_system>ok</cooling_system>
+            <internal_systems>
+                <air_conditioning is_cold="no" mode="3">ok</air_conditioning>
+                <autopilot is_on="yes">ok</autopilot>
+                <audio_system volume="70">ok</audio_system>
+                <on-board_computer>ok</on-board_computer>
+                <radio status="off">error</radio>
+            </internal_systems>
+            <windscreen_wiper status="off">
+                <left>ok</left>
+                <right>ok</right>
+            </windscreen_wiper>
+            <satellite_signal signal_power="5">ok</satellite_signal>
+            <radars>
+                <front>ok</front>
+                <left>ok</left>
+                <right>ok</right>
+                <rear>ok</rear>
+                <central>ok</central>
+            </radars>
+            <sensors>
+                <s1>ok</s1>
+                <s2>ok</s2>
+                <s3>ok</s3>
+                <s4>ok</s4>
+                <s5>ok</s5>
+                <s6>ok</s6>
+            </sensors>
+            <camera>
+                <c1>ok</c1>
+                <c2>ok</c2>
+                <c3>ok</c3>
+            </camera>
+        </system_control>
+    </owner>
+    <owner>
+        <id>2</id>
+        <name>
+            <first_name>Jeki</first_name>
+            <second_name>Chang</second_name>
+        </name>
+        <address country="China">Beijing</address>
+        <suspension_height correct="no">50</suspension_height>
+        <driving_style>normal</driving_style>
+        <light_color>yellow</light_color>
+        <charge_capacity>4200</charge_capacity>
+        <speed max="100" average="80">70</speed>
+        <gasoline_residue>50</gasoline_residue>
+        <before_the_inspection>3000</before_the_inspection>
+        <system_control>
+            <battery_quality>ok</battery_quality>
+            <oil>ok</oil>
+            <motor>ok</motor>
+            <wheels>
+                <front_right>ok</front_right>
+                <front_left>ok</front_left>
+                <rear_right>ok</rear_right>
+                <rear_left>ok</rear_left>
+            </wheels>
+            <body>ok</body>
+            <lights>
+                <front_right status="on">ok</front_right>
+                <front_left  status="on">ok</front_left>
+            </lights>
+            <turn_signals>
+                <front_right status="off">ok</front_right>
+                <front_left status="off">ok</front_left>
+                <rear_right status="off">ok</rear_right>
+                <rear_left status="off">ok</rear_left>
+            </turn_signals>
+            <electric_drive>ok</electric_drive>
+            <cooling_system>ok</cooling_system>
+            <internal_systems>
+                <air_conditioning is_cold="no" mode="3">ok</air_conditioning>
+                <autopilot is_on="no">ok</autopilot>
+                <audio_system volume="70">ok</audio_system>
+                <on-board_computer>ok</on-board_computer>
+                <radio status="off">ok</radio>
+            </internal_systems>
+            <windscreen_wiper status="off">
+                <left>ok</left>
+                <right>error</right>
+            </windscreen_wiper>
+            <satellite_signal signal_power="5">ok</satellite_signal>
+            <radars>
+                <front>ok</front>
+                <left>ok</left>
+                <right>ok</right>
+                <rear>ok</rear>
+                <central>ok</central>
+            </radars>
+            <sensors>
+                <s1>ok</s1>
+                <s2>ok</s2>
+                <s3>ok</s3>
+                <s4>ok</s4>
+                <s5>ok</s5>
+                <s6>ok</s6>
+            </sensors>
+            <camera>
+                <c1>ok</c1>
+                <c2>ok</c2>
+                <c3>ok</c3>
+            </camera>
+        </system_control>
+    </owner>
+    <owner>
+        <id>3</id>
+        <name>
+            <first_name>Brus</first_name>
+            <second_name>Li</second_name>
+        </name>
+        <address country="China">Beijing</address>
+        <suspension_height correct="no">15</suspension_height>
+        <driving_style>normal</driving_style>
+        <light_color>blue</light_color>
+        <charge_capacity>2000</charge_capacity>
+        <speed max="100" average="80">60</speed>
+        <gasoline_residue>40</gasoline_residue>
+        <before_the_inspection>3000</before_the_inspection>
+        <system_control>
+            <battery_quality>ok</battery_quality>
+            <oil>ok</oil>
+            <motor>ok</motor>
+            <wheels>
+                <front_right>ok</front_right>
+                <front_left>ok</front_left>
+                <rear_right>ok</rear_right>
+                <rear_left>ok</rear_left>
+            </wheels>
+            <body>ok</body>
+            <lights>
+                <front_right status="on">ok</front_right>
+                <front_left  status="on">ok</front_left>
+            </lights>
+            <turn_signals>
+                <front_right status="off">ok</front_right>
+                <front_left status="off">ok</front_left>
+                <rear_right status="off">ok</rear_right>
+                <rear_left status="off">ok</rear_left>
+            </turn_signals>
+            <electric_drive>ok</electric_drive>
+            <cooling_system>ok</cooling_system>
+            <internal_systems>
+                <air_conditioning is_cold="no" mode="2">ok</air_conditioning>
+                <autopilot is_on="no">ok</autopilot>
+                <audio_system volume="70">ok</audio_system>
+                <on-board_computer>ok</on-board_computer>
+                <radio status="off">ok</radio>
+            </internal_systems>
+            <windscreen_wiper status="off">
+                <left>ok</left>
+                <right>ok</right>
+            </windscreen_wiper>
+            <satellite_signal signal_power="5">ok</satellite_signal>
+            <radars>
+                <front>ok</front>
+                <left>ok</left>
+                <right>ok</right>
+                <rear>ok</rear>
+                <central>ok</central>
+            </radars>
+            <sensors>
+                <s1>ok</s1>
+                <s2>ok</s2>
+                <s3>ok</s3>
+                <s4>ok</s4>
+                <s5>ok</s5>
+                <s6>error</s6>
+            </sensors>
+            <camera>
+                <c1>ok</c1>
+                <c2>ok</c2>
+                <c3>ok</c3>
+            </camera>
+        </system_control>
+    </owner>
+    <owner>
+        <id>4</id>
+        <name>
+            <first_name>Ping</first_name>
+            <second_name>Pong</second_name>
+        </name>
+        <address country="China">Beijing</address>
+        <suspension_height correct="no">11</suspension_height>
+        <driving_style>slow</driving_style>
+        <light_color>white</light_color>
+        <charge_capacity>2000</charge_capacity>
+        <speed max="100" average="100">0</speed>
+        <gasoline_residue>1</gasoline_residue>
+        <before_the_inspection>0</before_the_inspection>
+        <system_control>
+            <battery_quality>error</battery_quality>
+            <oil>error</oil>
+            <motor>error</motor>
+            <wheels>
+                <front_right>error</front_right>
+                <front_left>error</front_left>
+                <rear_right>error</rear_right>
+                <rear_left>error</rear_left>
+            </wheels>
+            <body>ok</body>
+            <lights>
+                <front_right status="off">error</front_right>
+                <front_left  status="off">error</front_left>
+            </lights>
+            <turn_signals>
+                <front_right status="off">error</front_right>
+                <front_left status="off">error</front_left>
+                <rear_right status="off">error</rear_right>
+                <rear_left status="off">error</rear_left>
+            </turn_signals>
+            <electric_drive>error</electric_drive>
+            <cooling_system>error</cooling_system>
+            <internal_systems>
+                <air_conditioning is_cold="yes" mode="2">error</air_conditioning>
+                <autopilot is_on="no">error</autopilot>
+                <audio_system volume="70">error</audio_system>
+                <on-board_computer>error</on-board_computer>
+                <radio status="off">error</radio>
+            </internal_systems>
+            <windscreen_wiper status="off">
+                <left>ok</left>
+                <right>ok</right>
+            </windscreen_wiper>
+            <satellite_signal signal_power="0">error</satellite_signal>
+            <radars>
+                <front>error</front>
+                <left>error</left>
+                <right>error</right>
+                <rear>error</rear>
+                <central>error</central>
+            </radars>
+            <sensors>
+                <s1>error</s1>
+                <s2>error</s2>
+                <s3>error</s3>
+                <s4>error</s4>
+                <s5>error</s5>
+                <s6>error</s6>
+            </sensors>
+            <camera>
+                <c1>error</c1>
+                <c2>error</c2>
+                <c3>error</c3>
+            </camera>
+        </system_control>
+    </owner>
+    <owner>
+        <id>5</id>
+        <name>
+            <first_name>Jan</first_name>
+            <second_name>Prochazka</second_name>
+        </name>
+        <address country="Czech republic">Praha</address>
+        <suspension_height correct="no">20</suspension_height>
+        <driving_style>normal</driving_style>
+        <light_color>white</light_color>
+        <charge_capacity>3500</charge_capacity>
+        <speed max="120" average="80">60</speed>
+        <gasoline_residue>35</gasoline_residue>
+        <before_the_inspection>5000</before_the_inspection>
+        <system_control>
+            <battery_quality>ok</battery_quality>
+            <oil>ok</oil>
+            <motor>ok</motor>
+            <wheels>
+                <front_right>ok</front_right>
+                <front_left>ok</front_left>
+                <rear_right>ok</rear_right>
+                <rear_left>ok</rear_left>
+            </wheels>
+            <body>ok</body>
+            <lights>
+                <front_right status="on">ok</front_right>
+                <front_left  status="on">ok</front_left>
+            </lights>
+            <turn_signals>
+                <front_right status="off">ok</front_right>
+                <front_left status="off">ok</front_left>
+                <rear_right status="off">ok</rear_right>
+                <rear_left status="off">ok</rear_left>
+            </turn_signals>
+            <electric_drive>ok</electric_drive>
+            <cooling_system>ok</cooling_system>
+            <internal_systems>
+                <air_conditioning is_cold="no" mode="2">ok</air_conditioning>
+                <autopilot is_on="no">ok</autopilot>
+                <audio_system volume="70">ok</audio_system>
+                <on-board_computer>ok</on-board_computer>
+                <radio status="off">ok</radio>
+            </internal_systems>
+            <windscreen_wiper status="off">
+                <left>ok</left>
+                <right>ok</right>
+            </windscreen_wiper>
+            <satellite_signal signal_power="5">ok</satellite_signal>
+            <radars>
+                <front>ok</front>
+                <left>ok</left>
+                <right>ok</right>
+                <rear>ok</rear>
+                <central>ok</central>
+            </radars>
+            <sensors>
+                <s1>ok</s1>
+                <s2>ok</s2>
+                <s3>ok</s3>
+                <s4>ok</s4>
+                <s5>ok</s5>
+                <s6>error</s6>
+            </sensors>
+            <camera>
+                <c1>ok</c1>
+                <c2>ok</c2>
+                <c3>ok</c3>
+            </camera>
+        </system_control>
+    </owner>
+</car_setting>
