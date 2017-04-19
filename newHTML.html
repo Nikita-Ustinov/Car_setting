@@ -7,7 +7,7 @@
   <body>
       <header>
           <h1>Dokumentace semestralniho prajektu</h1>
-          <nav>
+          <nav class="main_menu">
               <ul>
                   <li><a href="#uvod">Uvod</a></li>
                   <li><a href="#transformace">Popis transformace</a></li>
@@ -16,74 +16,229 @@
           </nav>
       </header>
       <main>
-          <section>
-              <article id="uvod">
+          <section class="container">
+              <article id="uvod" class="uvod">
                   <h2>Uvod</h2>
                   <p>V danem projektu jsem vytvoril xml, ktere se popisuje konfigurace pro nejake auto</p>
               </article>
-              <article>
+              <article class="metodika">
                   <h2>Metodika</h2>
                   <p>Vetsinou jsem pouzival NetBeans a WordPad</p>
               </article>
-              <article>
+              <article class="popis_elementu">
                   <h2>Popis elementu</h2>
                   <table>
                       <caption>Pouzite elementy a popis</caption>
                       <tr>
                           <td>Nazev</td>
                           <td>Popis</td>
+                          <td>Type hodnoty</td>
                       </tr>
                       <tr>
                           <td>owner</td>
                           <td>zaznam jednoho majitele a prislusna konfigurace auta</td>
+                          <td>owner</td>
                       </tr>
                       <tr>
                           <td>name</td>
                           <td>Jmeno majitele</td>
+                          <td>name</td>
                       </tr>
                       <tr>
                           <td>driving_style</td>
                           <td>Popisuje styl rizeni</td>
+                          <td>String</td>
                       </tr>
                       <tr>
                           <td>light_colot</td>
                           <td>Nastaveni barvy svetla</td>
+                          <td>light_color</td>
                       </tr>
                       <tr>
                           <td>charge_capacity</td>
                           <td>Popislue zasobu baterie</td>
+                          <td>int</td>
                       </tr>
                       <tr>
                           <td>speed</td>
                           <td>Ukazuje s jakou ruchlosti momentalne jede auto</td>
+                          <td>int</td>
                       </tr>
                       <tr>
                           <td>gasoline_residue</td>
                           <td>Zbycajici paliva</td>
+                          <td>int</td>
                       </tr>
                       <tr>
                           <td>before_the_inspection</td>
                           <td>Kolik km zbyva do inspekce auta</td>
+                          <td>int</td>
                       </tr>
                       <tr>
                           <td>system_control</td>
                           <td>Popisuje jednotliva zarizeni, jejich stav, pripadne provozuschopnost</td>
-                      </tr>                    
+                          <td>system_control</td>
+                      </tr>  
+                      <tr>
+                          <td>battery_quality</td>
+                          <td>Muze nabyvat hodnot "ok" nebo "error" a rika jestli zarizeni funguje spravne</td>
+                          <td>ok/error</td>
+                      </tr>   
+                      <tr>
+                          <td>oil</td>
+                          <td>Muze nabyvat hodnot "ok" nebo "error" a rika jestli zarizeni funguje spravne</td>
+                          <td>ok/error</td>
+                      </tr>   
+                      <tr>
+                          <td>motor</td>
+                          <td>Muze nabyvat hodnot "ok" nebo "error" a rika jestli zarizeni funguje spravne</td>
+                          <td>ok/error</td>
+                      </tr>   
+                      <tr>
+                          <td>wheels</td>
+                          <td>Ma 4 jednotlivych kola,kazde muze nabyvat hodnot "ok" nebo "error" a rika jestli zarizeni funguje spravne</td>
+                          <td>ok/error</td>
+                      </tr>   
+                      <tr>
+                          <td>body</td>
+                          <td>Muze nabyvat hodnot "ok" nebo "error" a rika jestli zarizeni funguje spravne</td>
+                          <td>ok/error</td>
+                      </tr>   
+                      <tr>
+                          <td>lights</td>
+                          <td>Ma dva svetla reflektoru a muze nabyvat hodnot "ok" nebo "error" a rika jestli zarizeni funguje spravne</td>
+                          <td>ok/error</td>
+                      </tr>   
+                      <tr>
+                          <td>turn_signals</td>
+                          <td>Ma 4 jednotlivych reflektoru,kazde muze nabyvat hodnot "ok" nebo "error" a rika jestli zarizeni funguje spravne</td>
+                          <td>ok/error</td>
+                      </tr>   
+                      <tr>
+                          <td>electric_drive</td>
+                          <td>Muze nabyvat hodnot "ok" nebo "error" a rika jestli zarizeni funguje spravne</td>
+                          <td>ok/error</td>
+                      </tr> 
+                      <tr>
+                          <td>cooling_system</td>
+                          <td>Muze nabyvat hodnot "ok" nebo "error" a rika jestli zarizeni funguje spravne</td>
+                          <td>ok/error</td>
+                      </tr> 
+                      <tr>
+                          <td>internal_systems</td>
+                          <td>Popisuje jednotliva zarizeni vnitrnich system, jejich stav, pripadne provozuschopnost</td>
+                          <td>internal_systems</td>
+                      </tr>   
+                      <tr>
+                          <td>air_conditioning</td>
+                          <td>Muze nabyvat hodnot "ok" nebo "error" a rika jestli zarizeni funguje spravne</td>
+                          <td>ok/error</td>
+                      </tr>   
+                      <tr>
+                          <td>autopilot</td>
+                          <td>Muze nabyvat hodnot "ok" nebo "error" a rika jestli zarizeni funguje spravne</td>
+                          <td>ok/error</td>
+                      </tr>   
+                      <tr>
+                          <td>audio_system</td>
+                          <td>Muze nabyvat hodnot "ok" nebo "error" a rika jestli zarizeni funguje spravne</td>
+                          <td>ok/error</td>
+                      </tr>   
+                      <tr>
+                          <td>on-board_computer</td>
+                          <td>Muze nabyvat hodnot "ok" nebo "error" a rika jestli zarizeni funguje spravne</td>
+                          <td>ok/error</td>
+                      </tr>
+                      <tr>
+                          <td>radio</td>
+                          <td>Muze nabyvat hodnot "ok" nebo "error" a rika jestli zarizeni funguje spravne</td>
+                          <td>ok/error</td>
+                      </tr> 
+                      <tr>
+                          <td>windscreen_wiper</td>
+                          <td>Ma dva sterace (levy a pravy), muze nabyvat hodnot "ok" nebo "error" a rika jestli zarizeni funguje spravne</td>
+                          <td>windscreen_wiper</td>
+                      </tr> 
+                      <tr>
+                          <td>satellite_signal</td>
+                          <td>Muze nabyvat hodnot "ok" nebo "error" a rika jestli zarizeni funguje spravne</td>
+                          <td>ok/error</td>
+                      </tr> 
+                      <tr>
+                          <td>radars</td>
+                          <td>Ma pet radaru (levy, pravy, predni, zadni a centralni), muze nabyvat hodnot "ok" nebo "error" a rika jestli zarizeni funguje spravne</td>
+                          <td>radars</td>
+                      </tr> 
+                      <tr>
+                          <td>sensors</td>
+                          <td>Ma 6 senzoru(s1 az s6), muze nabyvat hodnot "ok" nebo "error" a rika jestli zarizeni funguje spravne</td>
+                          <td>sensors</td>
+                      </tr> 
+                      <tr>
+                          <td>camera</td>
+                          <td>Ma tri kamery(c1 az c3), muze nabyvat hodnot "ok" nebo "error" a rika jestli zarizeni funguje spravne</td>
+                          <td>camera</td>
+                      </tr> 
+                      <tr>
+                          <td>Atributy</td>
+                          <td>Popisuje jednotliva zarizeni, jejich stav, pripadne provozuschopnost</td>
+                          <td> - </td>
+                      </tr> 
+                      <tr>
+                          <td>country</td>
+                          <td>Popisuje jednotliva zarizeni, jejich stav, pripadne provozuschopnost</td>
+                          <td>String</td>
+                      </tr> 
+                      <tr>
+                          <td>correct</td>
+                          <td>Nabyva hodnoy "yes" nebo "no" a rika, jestli by melo aoto provest upravu vysky automobilu</td>
+                          <td>correct</td>
+                      </tr> 
+                      <tr>
+                          <td>max</td>
+                          <td>Hodnota typu "integer" rika maximalni rychlost auta </td>
+                          <td>int</td>
+                      </tr> 
+                      <tr>
+                          <td>average</td>
+                          <td>Hodnota typu "integer" rika prumernou rychlost auta </td>
+                          <td>int</td>
+                      </tr> 
+                      <tr>
+                          <td>status</td>
+                          <td>Muze nabyvat hodnot "on" nebo "off" a rika jestli zarizani vypnuto respektivem zapnuto</td>
+                          <td>status</td>
+                      </tr> 
+                      <tr>
+                          <td>mode</td>
+                          <td>Muze nabyvat hodnot "1-5" a rika jak silne fouka klimatizace</td>
+                          <td>mode</td>
+                      </tr> 
+                      <tr>
+                          <td>signal_power</td>
+                          <td>Muze nabyvat hodnot "1-5" a rika jak dobre zachycuje signal</td>
+                          <td>mode</td>
+                      </tr> 
                   </table>
               </article>
-              <article id="transformace">
+              <article id="transformace" class="transformation">
                   <h2>Popis transformace</h2>
                   <p>XML se transformuje do JSON a rika kazdemu majitelu, jstli by mel jet na inspekce auta.</p>
               </article>
-              <article>
+              <article class="ending">
                   <h2>Zaver</h2>
                   <p>Pomoci teto konfiguraci majitel muze dostat komplektnou informaci o automobilu</p>
               </article>
           </section>
       </main>
       <footer>
-          <section id="autor">
-              <p>Zpracoval: Nikita Ustinov<br/> Datum: 14.04.2017</p>
+          <section id="autor" class="autor">
+              <h2>Kontaktni informace</h2>
+              <p>Vysoka skola: Ceska Zemedelska Univerzita<br/>
+              Fakulta: Provozne ekonomicka<br/>
+              Obor: Informatika<br/>
+              Zpracoval: Nikita Ustinov<br/> 
+              Datum: 14.04.2017</p>
           </section>
       </footer>
   </body>

@@ -228,7 +228,7 @@
                                         <xs:complexType>
                                             <xs:simpleContent>
                                                 <xs:extension base="ok_error">
-                                                    <xs:attribute name="is_on" type="yes_no"/>
+                                                    <xs:attribute name="status" type="on_off"/>
                                                 </xs:extension>
                                             </xs:simpleContent>
                                         </xs:complexType>

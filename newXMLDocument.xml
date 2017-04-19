@@ -39,7 +39,7 @@
             <cooling_system>ok</cooling_system>
             <internal_systems>
                 <air_conditioning is_cold="no" mode="3">ok</air_conditioning>
-                <autopilot is_on="yes">ok</autopilot>
+                <autopilot status="on">ok</autopilot>
                 <audio_system volume="70">ok</audio_system>
                 <on-board_computer>ok</on-board_computer>
                 <radio status="off">error</radio>
@@ -110,7 +110,7 @@
             <cooling_system>ok</cooling_system>
             <internal_systems>
                 <air_conditioning is_cold="no" mode="3">ok</air_conditioning>
-                <autopilot is_on="no">ok</autopilot>
+                <autopilot status="off">ok</autopilot>
                 <audio_system volume="70">ok</audio_system>
                 <on-board_computer>ok</on-board_computer>
                 <radio status="off">ok</radio>
@@ -181,7 +181,7 @@
             <cooling_system>ok</cooling_system>
             <internal_systems>
                 <air_conditioning is_cold="no" mode="2">ok</air_conditioning>
-                <autopilot is_on="no">ok</autopilot>
+                <autopilot status="off">ok</autopilot>
                 <audio_system volume="70">ok</audio_system>
                 <on-board_computer>ok</on-board_computer>
                 <radio status="off">ok</radio>
@@ -252,7 +252,7 @@
             <cooling_system>error</cooling_system>
             <internal_systems>
                 <air_conditioning is_cold="yes" mode="2">error</air_conditioning>
-                <autopilot is_on="no">error</autopilot>
+                <autopilot status="off">error</autopilot>
                 <audio_system volume="70">error</audio_system>
                 <on-board_computer>error</on-board_computer>
                 <radio status="off">error</radio>
@@ -323,7 +323,7 @@
             <cooling_system>ok</cooling_system>
             <internal_systems>
                 <air_conditioning is_cold="no" mode="2">ok</air_conditioning>
-                <autopilot is_on="no">ok</autopilot>
+                <autopilot status="off">ok</autopilot>
                 <audio_system volume="70">ok</audio_system>
                 <on-board_computer>ok</on-board_computer>
                 <radio status="off">ok</radio>
